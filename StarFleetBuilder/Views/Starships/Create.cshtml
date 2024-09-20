@@ -1,108 +1,55 @@
 ﻿@model StarFleetBuilder.Models.Starship
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Purchase";
 }
 
-<h1>Create</h1>
+<h1 class="starwars-font">Purchase Starship</h1>
 
-<h4>Starship</h4>
+<h4 class="starwars-font">Selected Starship</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create">
+        <form asp-action="Create" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <!-- Display Starship Information -->
             <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
+                <label class="control-label">Model Name:</label>
+                <input asp-for="Name" class="form-control" readonly />
             </div>
             <div class="form-group">
-                <label asp-for="Model" class="control-label"></label>
-                <input asp-for="Model" class="form-control" />
-                <span asp-validation-for="Model" class="text-danger"></span>
+                <label class="control-label">Model:</label>
+                <input asp-for="Model" class="form-control" readonly />
             </div>
             <div class="form-group">
-                <label asp-for="Manufacturer" class="control-label"></label>
-                <input asp-for="Manufacturer" class="form-control" />
-                <span asp-validation-for="Manufacturer" class="text-danger"></span>
+                <label class="control-label">Cost:</label>
+                <input asp-for="CostInCredits" class="form-control" readonly />
             </div>
+            <!-- Hidden Fields-->
+            <input type="hidden" asp-for="Crew"/>
+            <input type="hidden" asp-for="Passengers"/>
+            <input type="hidden" asp-for="CargoCapacity"/>
+            <input type="hidden" asp-for="Consumables"/>
+            <input type="hidden" asp-for="Length" />
+
+
+            <!-- Purchase Button -->
             <div class="form-group">
-                <label asp-for="StarshipClass" class="control-label"></label>
-                <input asp-for="StarshipClass" class="form-control" />
-                <span asp-validation-for="StarshipClass" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Length" class="control-label"></label>
-                <input asp-for="Length" class="form-control" />
-                <span asp-validation-for="Length" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Crew" class="control-label"></label>
-                <input asp-for="Crew" class="form-control" />
-                <span asp-validation-for="Crew" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Passengers" class="control-label"></label>
-                <input asp-for="Passengers" class="form-control" />
-                <span asp-validation-for="Passengers" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="HyperdriveRating" class="control-label"></label>
-                <input asp-for="HyperdriveRating" class="form-control" />
-                <span asp-validation-for="HyperdriveRating" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="MGLT" class="control-label"></label>
-                <input asp-for="MGLT" class="form-control" />
-                <span asp-validation-for="MGLT" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CargoCapacity" class="control-label"></label>
-                <input asp-for="CargoCapacity" class="form-control" />
-                <span asp-validation-for="CargoCapacity" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Consumables" class="control-label"></label>
-                <input asp-for="Consumables" class="form-control" />
-                <span asp-validation-for="Consumables" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CostInCredits" class="control-label"></label>
-                <input asp-for="CostInCredits" class="form-control" />
-                <span asp-validation-for="CostInCredits" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="MaxAtmospheringSpeed" class="control-label"></label>
-                <input asp-for="MaxAtmospheringSpeed" class="form-control" />
-                <span asp-validation-for="MaxAtmospheringSpeed" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Created" class="control-label"></label>
-                <input asp-for="Created" class="form-control" />
-                <span asp-validation-for="Created" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Edited" class="control-label"></label>
-                <input asp-for="Edited" class="form-control" />
-                <span asp-validation-for="Edited" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Url" class="control-label"></label>
-                <input asp-for="Url" class="form-control" />
-                <span asp-validation-for="Url" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <button type="submit" class="btn btn-primary">
+                    Purchase
+                </button>
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Create" class="btn btn-secondary">Show me another</a>
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

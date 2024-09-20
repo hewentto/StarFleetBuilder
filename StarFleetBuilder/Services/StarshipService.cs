@@ -12,7 +12,6 @@ namespace StarFleetBuilder.Services
         private readonly HttpClient client = new HttpClient();
         private const string apiUrl = "https://swapi.dev/api/starships/";
 
-
         public async Task<Starship> GetRandomStarshipAsync()
         {
             var response = await client.GetStringAsync(apiUrl);
@@ -25,7 +24,24 @@ namespace StarFleetBuilder.Services
             var starshipDetails = await client.GetStringAsync(starship.Url);
             var starshipDetailsObject = JsonConvert.DeserializeObject<Starship>(starshipDetails);
 
+            AddCost(starshipDetailsObject);
+
             return starshipDetailsObject;
+        }
+
+        public async Task<Starship> GetStarshipByUrlAsync(string url)
+        {
+            var response = await client.GetStringAsync(url);
+            var starship = JsonConvert.DeserializeObject<Starship>(response);
+            AddCost(starship);
+            return starship;
+        }
+
+        private void AddCost(Starship starship)
+        {
+            Random random = new Random();
+            var cost = random.Next(245433, 3434564).ToString();
+            starship.CostInCredits = cost;
         }
     }
 

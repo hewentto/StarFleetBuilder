@@ -1,5 +1,6 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
+    font-family: 'StarJedi', sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -18,5 +19,101 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+@font-face {
+    font-family: 'StarJedi';
+    src: url('/fonts/DeathStar.otf') format('truetype');
+}
+
+.starwars-font {
+    font-family: 'StarJedi', sans-serif;
+    color: #feda4a; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+}
+
+
+.jumbotron {
+    background-color: transparent; 
+    color: #feda4a; 
+    padding: 40px;
+}
+
+
+.card {
+    background-color: #1c1c1c; 
+    color: white; 
+    border: 1px solid #333;
+}
+
+.btn-primary {
+    background-color: #feda4a; 
+    border-color: #feda4a;
+    color: #000; 
+}
+
+.btn-primary:hover {
+    background-color: #feda4a; 
+    border-color: #feda4a; 
+    color: #000; 
+    transform: scale(1.1);
+    transition: 0.3s;
+
+}
+
+.btn-secondary {
+    background-color: #4a4a4a; 
+    border-color: #4a4a4a;
+    color: #fff; 
+}
+
+.btn-secondary:hover{
+
+    background-color: #4a4a4a;
+    border-color: #4a4a4a;
+    color: #fff; 
+    transform: scale(1.1);
+    transition: 0.3s;
+
+}
+
+.control-label {
+    color: #ffffff;
+}
+
+h1, h4 {
+    color: #ffffff;
+}
+
+a {
+    color: #ffffff;
+}
+
+.table th {
+    font-family: 'StarJedi', sans-serif; 
+    color: #feda4a; 
+    background-color: #1a1a1a; 
+}
+
+.table td {
+    color: #ffffff;
+    background-color: #222;
+}
+
+.table a {
+    color: #feda4a; 
+    text-decoration: none;
+}
+
+.table a:hover {
+    text-decoration: underline; 
+}
+
+.hondo-image {
+    max-width: 100%; 
+    height: auto;
 }

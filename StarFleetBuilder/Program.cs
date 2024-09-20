@@ -11,6 +11,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<StarFleetBuilderContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("StarFleetBuilderContext")));
 builder.Services.AddScoped<StarshipService>();
+builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<DatabaseSeeder>();
 
 var app = builder.Build();

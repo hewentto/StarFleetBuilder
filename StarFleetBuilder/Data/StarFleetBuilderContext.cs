@@ -9,11 +9,12 @@ namespace StarFleetBuilder.Data
 {
     public class StarFleetBuilderContext : DbContext
     {
-        public StarFleetBuilderContext (DbContextOptions<StarFleetBuilderContext> options)
+        public StarFleetBuilderContext(DbContextOptions<StarFleetBuilderContext> options)
             : base(options)
         {
         }
 
         public DbSet<StarFleetBuilder.Models.Starship> Starship { get; set; } = default!;
+        public DbSet<StarFleetBuilder.Models.User> User { get; set; } = default!;
     }
 }

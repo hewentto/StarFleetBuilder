@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace StarFleetBuilder.Models
@@ -7,10 +8,8 @@ namespace StarFleetBuilder.Models
     {
         public int Id { get; set; }
 
-        [Required]
-        public string Name { get; set; }
-
-        public string Model { get; set; }
+        public required string Name { get; set; }
+        public required string Model { get; set; }
 
         public string? Manufacturer { get; set; }
 
@@ -29,7 +28,7 @@ namespace StarFleetBuilder.Models
         public string? CargoCapacity { get; set; }
 
         public string? Consumables { get; set; }
-
+        [DisplayName("Cost")]
         public string? CostInCredits { get; set; }
 
         public string? MaxAtmospheringSpeed { get; set; }
@@ -38,7 +37,6 @@ namespace StarFleetBuilder.Models
 
         public DateTime Edited { get; set; }
 
-        // URL and related fields can be added here for future expansion
         public string? Url { get; set; }
     }
 }

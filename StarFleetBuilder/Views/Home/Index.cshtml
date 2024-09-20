@@ -1,8 +1,22 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model StarFleetBuilder.ViewModels.HomeViewModel
+
+@{
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="jumbotron text-center">
+    <h1 class="starwars-font">Starfleet Builder</h1>
+    <p class="starwars-font">Build the greatest fleet in the galaxy. Buy, sell, and upgrade your ships!</p>
+    <div class="d-flex justify-content-center">
+        <!-- Explore Ships Button -->
+        <a href="@Url.Action("Create", "Starships", new {url = Model.RandomShipUrl})" class="btn btn-primary mx-2">Purchase it</a>
+
+        <!-- Go to Hanger Button -->
+        <a href="@Url.Action("Index", "Starships")" class="btn btn-secondary mx-2">Go to your hanger</a>
+    </div>
+
+    <!-- Centered Hondo Image and Starship Message -->
+    <div class="d-flex justify-content-center align-items-center mt-4">
+        <img src="~/images/hondo.png" alt="Hondo" class="img-fluid" style="max-width: 150px;" />
+        <p class="starwars-font ms-3">"I have a <i>@Model.RandomShipName</i> with your name on it!"</p>
+    </div>
 </div>
