@@ -72,7 +72,7 @@ This script will:
 ---
 
 ## **Project Structure**
-'''
+```
 StarFleetBuilder/
 │
 ├── Controllers/
@@ -105,4 +105,4 @@ StarFleetBuilder/
 ├── Program.cs  # Entry point for the application
 ├── setup.ps1  # PowerShell script for Windows setup
 ├── setup.sh  # Bash script for Linux/macOS setup
-'''
+```
