@@ -86,6 +86,7 @@ StarFleetBuilder/
 ├── Models/
 │   ├── Starship.cs  # Represents the starship model
 │   ├── User.cs  # Represents the user model
+|
 ├──ViewModels/
 │   ├── HomeViewModel.cs  # Holds API data for Index view
 |
