@@ -99,6 +99,12 @@ StarFleetBuilder/
 │   │   └── Index.cshtml  # Main page
 │   ├── Shared/
 │   │   └── _Layout.cshtml  # Layout view
+│   ├── Starship/
+│   │   └── Create.cshtml  
+│   │   └── Delete.cshtml  
+│   │   └── Details.cshtml 
+│   │   └── Edit.cshtml  
+│   │   └── Index.cshtml  
 │
 ├── wwwroot/
 │   ├── css/  # CSS files
