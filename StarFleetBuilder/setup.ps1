@@ -26,8 +26,5 @@ dotnet ef database update
 Write-Host "Building the project..."
 dotnet build
 
-# Run the application
-Write-Host "Running the application..."
-dotnet run
-
-Write-Host "Setup complete. The application is running."
+# Output Complete and user can now run the project
+Write-Host "Setup complete. You can now run the project."
