@@ -1,6 +1,6 @@
 ﻿# **Star Fleet Builder**
 
-Welcome to **Star Fleet Builder**! This project is an ASP.NET Core MVC application that retrieves data from the Star Wars API (SWAPI) and helps users build their own starship fleet. The application uses Entity Framework Core for database management and includes a streamlined setup process to get you started quickly.
+Welcome to **Star Fleet Builder**! This project is an ASP.NET Core MVC application that retrieves data from the Star Wars API (SWAPI) and helps users build their own starship fleet. The application uses Entity Framework Core for database management and includes a streamlined setup process to get you started quickly (assuming you're using Visual Studio).
 
 ## **Table of Contents**
 - [Features](#features)
